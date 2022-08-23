@@ -4,32 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EmployeeWage
+namespace LineComparision
 {
-    internal class Employee
-    {
-        public const int isfulltime = 1;
-        public const int isparttime = 2;
-        public const int emprateperhour = 20;
-        static void main(string[] args)
+    public class Comparision
+    {        
+       int x1, y1, x2, y2;
+        public Comparision(int_x1, int_x2, int_y1, int_y2)
         {
-            int emphrs = 0;
-            int empWage = 0;
-            Random rand = new Random();
-            int empcheck = rand.Next(0, 3);
-            switch (empcheck)
-            {
-                case isfulltime:
-                    emphrs = 8;
-                    break
-                case isparttime:
-                    emphrs = 4;
-                    break;
-                    default
-                    emphrs = 0;
-                    break;
-            }
-            empWage = emphrs * emprateperhour;
-            Console.WriteLine("emp wage : " + empWage);
+            this.x1 = _x1;
+            this.y1 = _y1;
+            this.x2 = _x2;
+            this.y2 = _y2;
+        }
+        public void CalculateLenght()
+        {
+            double LineLength = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 -y1, 2));
+            Console.WriteLine(LineLength);
         }
     }

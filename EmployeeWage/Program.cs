@@ -6,6 +6,8 @@
         {
          Employee empname = new Employee();
             empname.Attendance();
+            int result=empname.Dailywage();
+            Console.WriteLine(result);
         }
     }
 }

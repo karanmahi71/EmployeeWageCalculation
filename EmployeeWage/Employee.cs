@@ -8,32 +8,25 @@ namespace EmployeeWage
 {
     internal class Employee
     {
-        int isPresent = 1;
+        const int isfulltime = 1;
+        const int isparttime = 2;
         Random random = new Random();
-
-        internal int Dailywage()
-        {
-            throw new NotImplementedException();
-        }
-
         int emphrs = 0, Wageperhts = 20;
         public void Attendance()
         {
-            int result = random.Next(0, 2);
-            if (result == isPresent)
+            int result = ramdom.Next(0, 3);
+            if (result == 1)
             {
                 Console.WriteLine("employee is present");
                 emphrs += 8;
             }
-            else
+            else if (result == 2)
             {
-                Console.WriteLine("employee is absent");
+                Console.Writeline("employee is absent");
             }
-            int DailyWage()
+            public int DailyWage()
             {
-                return emphrs * Wageperhts;
+                return emphrs * Wageperhts
             }
-           
-          
         }
     }
